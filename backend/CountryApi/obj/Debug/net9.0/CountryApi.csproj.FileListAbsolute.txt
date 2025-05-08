@@ -1,0 +1,8 @@
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.csproj.AssemblyReference.cache
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.AssemblyInfoInputs.cache
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.AssemblyInfo.cs
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.csproj.CoreCompileInputs.cache
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\Flag-Explorer-App\backend\CountryApi\obj\Debug\net9.0\CountryApi.sourcelink.json
