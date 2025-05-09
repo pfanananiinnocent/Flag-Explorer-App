@@ -19,8 +19,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<IRestCountriesService, RestCountriesService>();
 
-//builder.Services.AddHttpClient<RestCountriesService>();
-
 var app = builder.Build();
 
 app.UseCors("AllowFrontend");
