@@ -1,25 +1,34 @@
+using Microsoft.AspNetCore.Mvc;
+using CountryApi.Models;
 using CountryApi.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+namespace CountryApi.Controllers
+{
+    [ApiController]
+    [Route("countries")]
+    public class CountriesController : ControllerBase
+    {
+        private readonly IRestCountriesService _service;
 
-// Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+        public CountriesController(IRestCountriesService service)
+        {
+            _service = service;
+        }
 
-// Register your custom service
-builder.Services.AddHttpClient<RestCountriesService>();
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Country>>> GetCountries()
+        {
+            var countries = await _service.GetAllCountriesAsync();
+            return Ok(countries);
+        }
 
-var app = builder.Build();
+        [HttpGet("{name}")]
+        public async Task<ActionResult<CountryDetails>> GetCountryByName(string name)
+        {
+            var country = await _service.GetCountryByNameAsync(name);
+            if (country == null) return NotFound();
 
-// Configure the HTTP request pipeline.
-app.UseSwagger();
-app.UseSwaggerUI();
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+            return Ok(country);
+        }
+    }
+}
