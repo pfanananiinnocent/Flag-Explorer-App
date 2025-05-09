@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
   pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -37,4 +39,4 @@ jobs:
         npm ci
         npm run test -- --watchAll=false
         npm run build
- 
+
